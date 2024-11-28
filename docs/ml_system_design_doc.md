@@ -51,7 +51,7 @@
 
 ## **4. Архитектура системы**
 
-![Архитектура системы](extensions/framework.png)
+![Архитектура системы](https://github.com/Chetoff1228/LLMevalFM/blob/hw_1/extensions/framework.png)
 
 
 ### 4.1 **Подход к тестированию**
