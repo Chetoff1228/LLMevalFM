@@ -84,18 +84,26 @@ python leaderboard.py --results results.json
 
 ```plaintext
 LLMevalFM/
-├── data/                  # Данные для тестирования
-├── docs/                  # Документация проекта
-│   └── ml_system_design_doc.md  # Дизайн-документ
-├── src/                   # Исходный код
-│   ├── evaluate.py        # Скрипт для оценки модели
-│   ├── compute_metrics.py # Метрики точности
-│   └── leaderboard.py     # Лидерборд
-├── tests/                 # Тесты
-├── .pre-commit-config.yaml # Конфигурация pre-commit
-├── pyproject.toml         # Настройка зависимостей Poetry
-├── README.md              # Описание проекта
-└── LICENSE                # Лицензия
+├── data/                          # Данные для тестирования
+├── docs/                          # Документация проекта
+│   └── ml_system_design_doc.md    # Дизайн-документ
+├── src/                           # Исходный код
+│   ├── config.py                  # Конфигурации
+│   ├── notebooks/                 # Jupyter Notebooks
+│   │   ├── __init__.py
+│   │   └── data_loader.ipynb
+│   ├── modules/                   # Модули системы
+│   │   ├── data_loader.py         # Загрузчик данных
+│   │   ├── compute_metrics.py     # Метрики точности
+│   │   ├── evaluate.py            # Скрипт для оценки модели
+│   │   ├── leaderboard.py         # Лидерборд
+│   │   └── __pycache__/           # Кэшированные файлы Python
+│   ├── __init__.py                # Инициализация пакета
+└── tests/                         # Тесты
+├── .pre-commit-config.yaml        # Конфигурация pre-commit
+├── pyproject.toml                 # Настройка зависимостей Poetry
+├── README.md                      # Описание проекта
+└── LICENSE                        # Лицензия
 ```
 
 ---
