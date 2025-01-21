@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://github.com/Chetoff1228/LLMevalFM"><img slava="extensions/views/logo_eng.png" alt="LLMevalFM"></a>
+  <a href="https://github.com/Chetoff1228/LLMevalFM"><img src="extensions/views/logo_eng.png" alt="LLMevalFM"></a>
 </div align="center">
 
 # LLMevalFM: Framework for Evaluating Large Language Models
