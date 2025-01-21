@@ -1,35 +1,38 @@
 [tool.poetry]
-name = "llmevalfm"
+name = "slava"
 version = "0.1.0"
-description = "Benchmark for evaluating the factual accuracy of LLMs in the Russian context."
-authors = ["Chetvergov"]
-license = "MIT"
+description = ""
+authors = ["Rinat Sharafetdinov <rinat.sharafetdinov42@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
-black = "^24.10.0"
-ruff = "^0.8.0"
-pre-commit = "^4.0.1"
-pandas = "^2.2.3"
-numpy = "^2.1.3"
-logging = "^0.4.9.6"
-huggingface-hub = "^0.27.0"
-
+python = "^3.10"
+numpy = "^1.24.0"
+pandas = "^2.2.2"
+fuzzywuzzy = "^0.18.0"
+huggingface-hub = "^0.25.1"
+langchain = "^0.3.0"
+langchain-huggingface = "^0.1.0"
+langchain-ollama = "^0.2.0"
+langchain-community = "^0.3.0"
+openpyxl = "^3.1.5"
+gigachat = "^0.1.35"
+google-generativeai = "^0.8.3"
+openai = "^1.53.0"
+anthropic = "^0.37.1"
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^8.3.3"
+black = "^24.8.0"
+isort = "^5.13.2"
+ipykernel = "^6.29.5"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.black]
-line-length = 88
-target-version = ['py310', 'py311']
+line-length = 120
 
-
-[tool.ruff]
-line-length = 88
-select = ["E", "F", "W", "C90"]
-ignore = ["E501"]
+[tool.isort]
+profile = "black"
+line_length = 120

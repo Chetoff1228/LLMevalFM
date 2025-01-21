@@ -3,7 +3,7 @@ import logging
 import pandas as pd
 from huggingface_hub import hf_hub_download
 
-from src.config import OPEN_DATASET_FILENAME, REPO_ID, REPO_TYPE, REQUIRED_COLUMNS
+from slava.config import OPEN_DATASET_FILENAME, REPO_ID, REPO_TYPE, REQUIRED_COLUMNS
 
 
 class DataLoader:

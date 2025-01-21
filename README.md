@@ -1,133 +1,99 @@
-# LLMevalFM
+<div align="center">
+  <a href="https://github.com/Chetoff1228/LLMevalFM"><img src="extensions/views/logo_eng.png" alt="LLMevalFM"></a>
+</div align="center">
 
-## Описание проекта
+# LLMevalFM: Framework for Evaluating Large Language Models
 
-**LLMevalFM** — это фреймворк для оценки фактической точности больших языковых моделей (LLM) на русском языке.
+[LLMevalFM](https://github.com/Chetoff1228/LLMevalFM) is a framework designed to assess the factual accuracy of large language models (LLMs) within the Russian context.
 
-Цель проекта — предоставить разработчикам и исследователям инструмент для проверки точности моделей в контексте географических, политических и культурных особенностей, характерных для русского языка и региона.
+## Description
 
-Фреймворк ориентирован на анализ ответов моделей на вопросы на русском языке, чтобы оценить их способность давать корректные и релевантные ответы в сложных и чувствительных областях.моделей на основе реальных данных, включая сложные и чувствительные темы. Это поможет улучшить производительность моделей в задачах, связанных с российским контекстом.
+LLMevalFM evaluates LLMs by measuring their performance on Russian-centric datasets, including culturally, geographically, and politically sensitive topics. The goal is to provide researchers and developers with tools for benchmarking and improving model accuracy in real-world scenarios.
 
-### Основные возможности:
-- **Датасет SLAVA**: Набор вопросов, охватывающих широкий спектр социально-политических тем. [Ссылка на датасет](https://huggingface.co/datasets/RANEPA-ai/SLAVA-OpenData-2800-v1)
-- **Оценка точности**: Метрики для анализа точности ответов моделей.
-- **Лидерборд**: Сравнение результатов разных моделей для выявления лидеров.
+### Key Features
 
-## Цели проекта
-
-- **Оценка точности LLM**: Предоставить инструмент для оценки способности больших языковых моделей (LLM) генерировать правдивую информацию, особенно в чувствительных областях, таких как политика, экономика и культура.
-- **Улучшение производительности моделей**: Повысить точность моделей, улучшая их способность правильно работать с реальными данными (прромпт-инжиниринг).
-- **Применение в российском контексте**: Адаптировать оценки точности моделей для специфики российского контекста, включая социально-политические вопросы (база данных ЕГЭ).
-
-## Задачи проекта
-
-- **Создание датасета**: Составить набор вопросов, который охватывает широкий спектр социально-политических и других чувствительных тем.
-- **Оценка точности ответов**: Разработать метрики для анализа правдивости ответов моделей и их способности генерировать фактически точную информацию.
-- **Разработка лидерборда**: Создать систему для сравнения результатов разных моделей и определения наиболее точных моделей в контексте заданных тем.
-
-## Планы
-
-- **Расширение датасета**: Включение дополнительных вопросов, охватывающих новые области знаний и более специфичные темы.
-- **Улучшение метрик оценки**: Разработка новых метрик для более точной оценки правдивости и фактической точности ответов.
-- **Интеграция с другими платформами**: Возможность интеграции с другими инструментами и платформами для более широкой оценки моделей.
-- **Поддержка различных языков**: Расширение функционала для работы с различными языками (страны СНГ), включая поддержку многоязычных моделей.
+- **SLAVA Dataset**: A comprehensive collection of Russian sociopolitical questions. [Dataset Link](https://huggingface.co/datasets/RANEPA-ai/SLAVA-OpenData-2800-v1)
+- **Accuracy Metrics**: Includes multiple tools to measure and analyze the factuality of LLM-generated answers.
+- **Leaderboard**: Allows easy comparison of model performances to identify top-performing solutions.
 
 ---
 
-## Установка
+## Installation
 
-### Системные требования:
+### Prerequisites
 - Python 3.10+
-- Poetry (рекомендуется для управления зависимостями)
+- Poetry for dependency management
 
-### Шаги установки:
-1. Клонируйте репозиторий:
+### Steps
+1. Clone the repository:
    ```bash
    git clone https://github.com/Chetoff1228/LLMevalFM.git
    cd LLMevalFM
    ```
-2. Установите зависимости:
+
+2. Install dependencies:
    ```bash
    poetry install
    ```
 
-3. Настройте pre-commit (опционально):
+3. Activate the virtual environment:
    ```bash
-   pre-commit install
+   poetry shell
    ```
 
----
-
-## Использование
-
-### Запуск тестов:
-Для проверки производительности модели на датасете SLAVA:
-```bash
-python evaluate.py --model <model_name> --dataset data/slava.json
-```
-
-### Расчет метрик:
-Скрипт для генерации метрик:
-```bash
-python compute_metrics.py --input predictions.json --output results.json
-```
-
-### Просмотр лидерборда:
-Генерация таблицы сравнения:
-```bash
-python leaderboard.py --results results.json
-```
+4. Explore the functionality through notebooks in the `notebooks` folder.
 
 ---
 
-## Структура репозитория
+## Repository Structure
 
 ```plaintext
 LLMevalFM/
-├── data/                          # Данные для тестирования
-├── docs/                          # Документация проекта
-│   └── ml_system_design_doc.md    # Дизайн-документ
-├── src/                           # Исходный код
-│   ├── config.py                  # Конфигурации
-│   ├── notebooks/                 # Jupyter Notebooks
+├── README.md                      # Project description
+├── LICENSE                        # License file
+├── pyproject.toml                 # Poetry configuration
+├── poetry.lock                    # Dependency lock file
+├── slava/
+│   ├── __init__.py
+│   ├── config.py                  # Configuration settings
+│   ├── modules/
 │   │   ├── __init__.py
-│   │   └── data_loader.ipynb
-│   ├── modules/                   # Модули системы
-│   │   ├── data_loader.py         # Загрузчик данных
-│   │   ├── compute_metrics.py     # Метрики точности
-│   │   ├── evaluate.py            # Скрипт для оценки модели
-│   │   ├── leaderboard.py         # Лидерборд
-│   │   └── __pycache__/           # Кэшированные файлы Python
-│   ├── __init__.py                # Инициализация пакета
-└── tests/                         # Тесты
-├── .pre-commit-config.yaml        # Конфигурация pre-commit
-├── pyproject.toml                 # Настройка зависимостей Poetry
-├── README.md                      # Описание проекта
-└── LICENSE                        # Лицензия
+│   │   ├── data_loader.py         # Data loading utilities
+│   │   ├── compute_metrics.py     # Accuracy metric calculations
+│   │   ├── evaluate.py            # Evaluation logic
+│   │   ├── leaderboard.py         # Leaderboard generation
+│   │   └── utils/
+│   │       ├── class_metrics.py   # Metrics logic
+│   │       └── metrics_utils.py   # Helper functions
+│   ├── notebooks/
+│       ├── __init__.py
+│       ├── data_loader.ipynb      # Example for loading datasets
+│       ├── metrics.ipynb          # Accuracy metrics demonstration
+│       └── evaluation.ipynb       # Evaluation examples
+└── tests/                         # Test scripts
 ```
 
 ---
 
-## Контрибуция
+## Contribution
 
-Мы приветствуем предложения и улучшения от сообщества!
-Чтобы внести вклад:
-1. Сделайте форк репозитория.
-2. Создайте ветку для изменений:
+We welcome contributions to LLMevalFM! To contribute:
+1. Fork the repository.
+2. Create a feature branch:
    ```bash
    git checkout -b feature/<feature_name>
    ```
-3. Отправьте pull request.
+3. Submit a pull request with your changes.
 
 ---
 
-## Контакты
+## Contact
 
-Для вопросов и предложений пишите на:
-📧 **chetvergov-as@ranepa.ru**
+📧 For inquiries or suggestions: **chetvergov-as@ranepa.ru**
 
 ---
 
-## Лицензия
+## License
 
-Проект распространяется под лицензией **MIT**. Ознакомьтесь с файлом [LICENSE](LICENSE) для получения дополнительной информации.
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+```
