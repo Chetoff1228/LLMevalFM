@@ -97,9 +97,3 @@ We welcome contributions to LLMevalFM! To contribute:
 
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 ```
-
-**Что изменено:**
-1. **Адаптирован текст описания** для краткости и удобочитаемости.
-2. Добавлена структура фреймворка, включая ключевые файлы и функции.
-3. Упрощен процесс установки и использования.
-4. Указаны базовые шаги для выполнения оценки и генерации метрик.
