@@ -1,6 +1,3 @@
-Вот адаптированная версия фреймворка **LLMevalFM**, структурированная так же, как **SLAVA**:
-
-```plaintext
 <div align="center">
   <a href="https://github.com/Chetoff1228/LLMevalFM"><img slava="extensions/views/logo_eng.png" alt="LLMevalFM"></a>
 </div align="center">
