@@ -61,10 +61,7 @@ F1_SCORE_COLUMN: Final[str] = "f1_score"
 IS_SUBSTRING_COLUMN: Final[str] = "is_substring"
 PARTIALLY_MATCH_COLUMN: Final[str] = "partially_match"
 
-QUESTION_TYPES_NAMING = {
-    OPEN_QUESTION_TYPE_NAME: "Open",
-    NOT_OPEN_QUESTION_TYPE_NAME: "Not open",
-}
+QUESTION_TYPES_NAMING = {OPEN_QUESTION_TYPE_NAME: "Open", NOT_OPEN_QUESTION_TYPE_NAME: "Not open"}
 
 LEADERBOARD_SHEET_NAME = "Leaderboard"
 TYPE_OF_QUESTION_SHEET_NAME = "Type of question"
@@ -94,11 +91,7 @@ QUESTION_VALUES_NAMING = {
 
 PROVOCATIVENESS_NAMING = {"1": "Low", "2": "Medium", "3": "High"}
 
-COMBINED_VALUES_NAMING = {
-    **SUBJECTS_NAMING,
-    **QUESTION_VALUES_NAMING,
-    **PROVOCATIVENESS_NAMING,
-}
+COMBINED_VALUES_NAMING = {**SUBJECTS_NAMING, **QUESTION_VALUES_NAMING, **PROVOCATIVENESS_NAMING}
 
 METRICS_NAMING = {
     EXACT_MATCH_COLUMN: "EM",
@@ -114,12 +107,7 @@ AGGFUNC: Final[str] = "mean"
 REPO_ID: Final[str] = "RANEPA-ai/SLAVA-OpenData-2800-v1"
 REPO_TYPE: Final[str] = "dataset"
 OPEN_DATASET_FILENAME: Final[str] = "open_questions_dataset.jsonl"
-REQUIRED_COLUMNS: Final[list[str]] = [
-    INSTRUCTION_COLUMN,
-    INPUTS_COLUMN,
-    REAL_ANSWER_COLUMN,
-    META_COLUMN,
-]
+REQUIRED_COLUMNS: Final[list[str]] = [INSTRUCTION_COLUMN, INPUTS_COLUMN, REAL_ANSWER_COLUMN, META_COLUMN]
 
 # Pivot tables
 OPEN_QUESTION_VALUES_FOR_PIVOT_TABLES: Final[list[str]] = [
@@ -134,11 +122,49 @@ NOT_OPEN_QUESTION_VALUES_FOR_PIVOT_TABLES: Final[list[str]] = [
 ]
 
 # Models
-MODELS_TYPES: Final[tuple[str]] = [
-    "gigachat",
-    "huggingface",
-    "ollama",
-    "openai",
-    "yandexgpt",
-]
+MODELS_TYPES: Final[tuple[str]] = ["gigachat", "huggingface", "ollama", "openai", "yandexgpt"]
 DEVICE: Final[int] = 0
+
+# ClaudeModel
+CLAUDE_MODEL_NAME: Final[str] = "claude-3-5-sonnet-20240620"
+CLAUDE_MODEL_TEMPERATURE: Final[float] = 0.0
+CLAUDE_MODEL_TOP_K: Final[int] = 1
+CLAUDE_MODEL_MAX_TOKENS: Final[int] = 25
+
+# GeminiModel
+GEMINI_MODEL_NAME: Final[str] = "gemini-1.5-flash"
+
+# GigaChatModel
+GIGACHAT_MODEL_SCOPE: Final[str] = "GIGACHAT_API_PERS"
+GIGACHAT_MODEL_TEMPERATURE: Final[float] = 0.0
+GIGACHAT_MODEL_TOP_K: Final[int] = 1
+GIGACHAT_MODEL_MAX_TOKENS: Final[int] = 25
+
+# HuggingFaceModel
+HUGGINGFACE_MODEL_TEMPERATURE: Final[float] = 0.0
+HUGGINGFACE_MODEL_TOP_K: Final[int] = 1
+HUGGINGFACE_MODEL_MAX_TOKENS: Final[int] = 25
+
+# OllamaModel
+OLLAMA_MODEL_TEMPERATURE: Final[float] = 0.0
+OLLAMA_MODEL_TOP_K: Final[int] = 1
+OLLAMA_MODEL_MAX_TOKENS: Final[int] = 25
+
+# OpenAIModel
+OPENAI_MODEL_NAME: Final[str] = "gpt-4o"
+OPENAI_MODEL_TEMPERATURE: Final[float] = 0.0
+OPENAI_MODEL_MAX_TOKENS: Final[int] = 25
+
+
+# YandexGPTModel
+YANDEXGPT_URL: Final[str] = "https://llm.api.cloud.yandex.net/foundationModels/v1/completion"
+YANDEXGPT_MODEL_URI: Final[str] = "gpt://{}/yandexgpt"
+YANDEXGPT_STREAM: Final[bool] = False
+YANDEXGPT_TEMPERATURE: Final[float] = 0.0
+YANDEXGPT_MAXTOKENS: Final[str] = "25"
+
+# ModelEval
+PROMPT_INSTRUCTION: Final[str] = (
+    "\nСАМОЕ ВАЖНОЕ: Отвечай максимально кратко используя только цифры если они даны или слова в задачах с открытым ответом.\nОтвет: "
+)
+RESULTS_FILEPATH: Final[str] = "results.csv"
