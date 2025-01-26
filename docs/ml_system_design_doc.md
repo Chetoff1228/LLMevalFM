@@ -414,7 +414,7 @@
   - **Streamlit Interface** — интерфейс для визуализации данных и статистики.
 
   **Картинка архитектуры решения**:
-  ![Architecture_Schema](https://github.com/Chetoff1228/LLMevalFM/slava/inference/SLAVA_Platform/extensions/architecture_schema.png)
+  ![Architecture_Schema](https://github.com/Chetoff1228/LLMevalFM/blob/hw_4/extensions/framework.png)
 
 #### **4.2 Описание инфраструктуры и масштабируемости**
 - **Выбор инфраструктуры**: Для развертывания и масштабирования системы используются контейнеры Docker для изоляции сервисов и их управления. 
