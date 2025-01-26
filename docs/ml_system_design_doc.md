@@ -81,7 +81,7 @@
 
 #### **2.4. Архитектура системы**
 
-![Архитектура системы](https://github.com/Chetoff1228/LLMevalFM/blob/hw_1/extensions/framework.png)
+![Архитектура системы](https://github.com/Chetoff1228/LLMevalFM/blob/hw_4/extensions/framework.png)
 
 
 #### Подход к тестированию
@@ -456,11 +456,11 @@
 
 #### Пример работы чатбота
 - **GIF примера работы чатбота**:
-  ![Chatbot Example](https://github.com/Chetoff1228/LLMevalFM/extensions/views/AGORA.gif)
+  ![Chatbot Example](https://github.com/Chetoff1228/LLMevalFM/blob/hw_4/extensions/views/AGORA.gif)
 
 #### Пример инференса
 - **Картинка примера инференса**:
-  ![Inference Example 1](https://github.com/Chetoff1228/LLMevalFM/slava/inference/SLAVA_Platform/extensions/box_plot_category.png)
+  ![Inference Example 1](https://github.com/Chetoff1228/LLMevalFM/blob/hw_4/slava/inference/SLAVA_Platform/extensions/box_plot_category.png)
   
 - **Картинка примера инференса**:
-  ![Inference Example 2](https://github.com/Chetoff1228/LLMevalFM/slava/inference/SLAVA_Platform/extensions/min_max_dist.png)
+  ![Inference Example 2](https://github.com/Chetoff1228/LLMevalFM/blob/hw_4/slava/inference/SLAVA_Platform/extensions/min_max_dist.png)

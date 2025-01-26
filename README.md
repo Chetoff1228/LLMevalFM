@@ -1,6 +1,8 @@
 <div align="center">
-  <a href="https://github.com/Chetoff1228/LLMevalFM"><img slava="extensions/views/logo_eng.png" alt="LLMevalFM"></a>
-</div align="center">
+  <a href="https://github.com/Chetoff1228/LLMevalFM/blob/hw_4">
+    <img src="https://github.com/Chetoff1228/LLMevalFM/blob/hw_4/extensions/views/logo_eng.png" alt="LLMevalFM">
+  </a>
+</div>
 
 # LLMevalFM: Framework for Evaluating Large Language Models
 
@@ -42,6 +44,7 @@ LLMevalFM evaluates LLMs by measuring their performance on Russian-centric datas
    ```
 
 4. Explore the functionality through notebooks in the `notebooks` folder.
+
 
 ---
 
